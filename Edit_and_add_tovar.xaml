@@ -1,0 +1,24 @@
+﻿<Window x:Class="namordnIc.Edit_and_add_tovar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:namordnIc"
+             mc:Ignorable="d" Title="Add_edit_client" Height="325" FontSize="18" Width="535" Margin="10,0,10,10" Background="#B0E5FD" BorderBrush="Black" UseLayoutRounding="False" Foreground="Black">
+    <Grid Margin="25,0,0,19">
+        <TextBox x:Name="Type1" HorizontalAlignment="Left" Margin="29,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Height="27" Background="#FDBD40"/>
+        <TextBox x:Name="name1" HorizontalAlignment="Left" Margin="29,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Height="24" Background="#FDBD40"/>
+        <TextBox x:Name="Articul1"  HorizontalAlignment="Left" Margin="29,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Height="24" Background="#FDBD40"/>
+        <TextBox x:Name="Cena" HorizontalAlignment="Left" Margin="29,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Height="24" Background="#FDBD40"/>
+        <TextBox x:Name="Material1" HorizontalAlignment="Left" Margin="29,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Height="24" Background="#FDBD40"/>
+        <Label Content="Наименование продукта" x:Name="name" HorizontalAlignment="Left" Margin="174,64,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="12" Width="134" Height="25" />
+        <Label Content="Артикул" x:Name="articul" HorizontalAlignment="Left" Margin="174,105,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="12" RenderTransformOrigin="0.488,0.632"/>
+        <Label Content="Тип продукта" x:Name="type" HorizontalAlignment="Left" Margin="174,24,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="12" Width="105"/>
+        <Image x:Name="Photo2"  HorizontalAlignment="Left" Height="163" Margin="330,26,0,0" VerticalAlignment="Top" Width="155" Source="/picture.png" />
+        <Label Content="Цена" x:Name="Cost" HorizontalAlignment="Left" Margin="174,145,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="12"/>
+        <Label Content="Материал" x:Name="Material" HorizontalAlignment="Left" Margin="174,183,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="12"/>
+        <Button x:Name="Edit" Content="Добавить" HorizontalAlignment="Left" Margin="305,205,0,0" VerticalAlignment="Top" Background="#FDBD40" FontSize="14" FontFamily="Times New Roman" Click="Edit_Click" Height="29" Width="85"  />
+        <Button x:Name="Delete" Content="Удалить" HorizontalAlignment="Left" Margin="408,205,0,0" VerticalAlignment="Top" Background="#FDBD40" FontSize="14" FontFamily="Times New Roman" Height="29" Width="70"  />
+        <Button x:Name="save" Content="Добавить" HorizontalAlignment="Left" Margin="330,205,0,0" VerticalAlignment="Top" Background="#FDBD40" FontSize="14" FontFamily="Times New Roman" Visibility="Hidden" Click="Save_Click" />
+    </Grid>
+</Window>

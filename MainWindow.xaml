@@ -1,0 +1,55 @@
+﻿<Window x:Class="namordnIc.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:namordnIc"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="860" >
+    <Grid Background="#FFF9F9F9">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <ScrollViewer Grid.Row="1">
+            <WrapPanel x:Name="products" HorizontalAlignment="Center"/>
+        </ScrollViewer>
+
+
+        <ComboBox x:Name="filter" HorizontalAlignment="Center" Margin="0,24,0,0" VerticalAlignment="Top" Width="120" Height="40" SelectionChanged="filt_opr" >
+            <ComboBoxItem Content="Все" IsSelected="True"/>
+            <ComboBoxItem Content="Полумаски" IsSelected="False"/>
+            <ComboBoxItem Content="Повязки" IsSelected="False"/>
+            <ComboBoxItem Content="Маски" IsSelected="False"/>
+            <ComboBoxItem Content="Респираторы" IsSelected="False"/>
+            <ComboBoxItem Content="На лицо" IsSelected="False"/>
+            <ComboBoxItem Content="Полнолицевые" IsSelected="False"/>
+            <ComboBoxItem Content="Сменные части" IsSelected="False"/>
+            <ComboBoxItem Content="Запасные части" IsSelected="False"/>
+            <ComboBoxItem Content="Держатели" IsSelected="False"/>
+            <ComboBoxItem Content="Предфильтры" IsSelected="False"/>
+        </ComboBox>
+        <ComboBox x:Name="sorting" HorizontalAlignment="Left" Margin="520,24,0,0" VerticalAlignment="Top" Width="120" Height="40" SelectionChanged="sorting_SelectionChanged">
+            <ComboBoxItem Content="Все" IsSelected="True"/>
+            <ComboBoxItem Content="от 0 до 1000"/>
+            <ComboBoxItem Content="от 1000 до 2000"/>
+            <ComboBoxItem Content="2000 и более"/>
+
+        </ComboBox>
+        <TextBox x:Name="search" HorizontalAlignment="Left"  Margin="25,24,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="320" Height="40" TextChanged="search_TextChanged"/>
+        <Button x:Name="But_dobavit"  Content="Добавить товар" HorizontalAlignment="Left" Margin="665,24,0,0" VerticalAlignment="Top" Background="#FDBD40" FontSize="14" FontFamily="Times New Roman" Height="40" Width="160" Click="But_dobavit_Click"   />
+        <ComboBox x:Name="filterTOP" HorizontalAlignment="Center" Margin="0,75,0,0" VerticalAlignment="Top" Width="120" Height="40" SelectionChanged="filterTOP_SelectionChanged" >
+            <ComboBoxItem Content="Все" IsSelected="True"/>
+            <ComboBoxItem Content="5" IsSelected="False"/>
+            <ComboBoxItem Content="10" IsSelected="False"/>
+            <ComboBoxItem Content="15" IsSelected="False"/>
+            <ComboBoxItem Content="25" IsSelected="False"/>
+        </ComboBox>
+        <Button x:Name="back_btn" Content="&lt;" HorizontalAlignment="Left" Margin="25,90,0,0" VerticalAlignment="Top" Width="50" Click="back_btn_Click" />
+        <Button x:Name="forward_btn" Content="&gt;" HorizontalAlignment="Left" Margin="83,90,0,0" VerticalAlignment="Top" Width="50" Click="forward_btn_Click"/>
+        <Label x:Name="number_1" Content="0" HorizontalAlignment="Left" Height="25" Margin="185,90,0,0" VerticalAlignment="Top" Width="30"/>
+        <Label x:Name="number_2" Content="0" HorizontalAlignment="Left" Height="25" Margin="239,90,0,0" VerticalAlignment="Top" Width="44"/>
+        <Label Content="из" HorizontalAlignment="Left" Height="25" Margin="215,90,0,0" VerticalAlignment="Top" Width="28"/>
+    </Grid>
+</Window>
